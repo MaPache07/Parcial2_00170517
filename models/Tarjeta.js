@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var Trajeta = mongoose.Schema({
+var Tarjeta = mongoose.Schema({
     id: {
         type: String,
         require: true
