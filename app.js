@@ -3,6 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/tarjeta', {useNewUrlParser: true})
+  .then(() => console.log('Mongoose is connected'))
+  .catch((err) => {
+    console.log(err);
+  })
 
 var tarjetaRouter = require('./routes/tarjeta');
 var indexRouter = require('./routes/index');
