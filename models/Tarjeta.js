@@ -1,0 +1,18 @@
+var mongoose = require('mongoose');
+
+var Trajeta = mongoose.Schema({
+    id: {
+        type: String,
+        require: true
+    },
+    fecha: {
+        type: Date,
+        require: true
+    },
+    codigo: {
+        type: String,
+        require: true
+    }
+});
+
+module.exports = mongoose.model('tarjeta', Tarjeta);
