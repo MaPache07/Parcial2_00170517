@@ -3,4 +3,15 @@ extends layout
 block content
   nav(class = 'navbar')
     h1()= title
-  div(class = 'card')
+  div(class = 'card row')
+    form(action = '/', method = 'POST', class='form-group')
+      input(type='text', placeholder='Id de tarjeta', class='form-control', name='tarjeta', id='tarjeta')
+      input(type='date', class='form-control', name='fecha', id='fecha')
+      input(type='text', placeholder='Id', class='form-control', name='descripcion', id='descripcion')
+      input(type='submit', placeholder='Id de tarjeta', class='form-control btn btn-primary bg-success', value='Guardar', name='fecha', id='fecha')
+  table
+    thead()
+      th Id de tarjeta
+      th Fecha de vencimiento
+      th Codigo de verificacion
+    tbody(class = 'filas')
